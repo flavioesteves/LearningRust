@@ -3,7 +3,6 @@
   * [https://crates.io/](https://crates.io/)
   * [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/)
 
-
 # Section 1:Getting Started
 01. Course Introduction
 02. What is Rust
@@ -78,3 +77,13 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 20. References and Borrowing (!IMPORTANT)
   * "&" before the type means Borrowing in RUST
   * "&mut" allow to be mutable. 
+  * Important rule for references in the same scope:
+    - Many immutable references
+    - Single mutable reference 
+21. Explore the Ownership and Borrowing in GDB
+22. Finishing Touches
+  * Unwrap method() : if the result of the function is an error then the program will terminate.
+
+# Section 4:Building a HTTP Server From Scratch
+23. Code for this section
+24. Introduction
