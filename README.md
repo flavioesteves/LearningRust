@@ -87,3 +87,12 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 # Section 4:Building a HTTP Server From Scratch
 23. Code for this section
 24. Introduction
+  * Learning Rust > Server Performance
+25. The HTTP Protocol and the Architecture of Our Server
+  * HTTP/1.1: L7 Protocol, Sent over TCP, Message based
+  * Request / Response
+  * Server: TCP Listener, HTTP Parser, Handler
+26. Structs
+  * Struct is a custom type, kind like a class in object oriented languages (Aggregates data)
+  * Structs have blocks, the data block keyword "struct", implementation block keyword "impl"
+
