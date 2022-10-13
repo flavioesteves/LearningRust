@@ -95,4 +95,7 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 26. Structs
   * Struct is a custom type, kind like a class in object oriented languages (Aggregates data)
   * Structs have blocks, the data block keyword "struct", implementation block keyword "impl"
-
+27. Strings
+  * Rust have 2 types of strings
+  * str is called a string slice of a string. Slice is an immutable reference to a part of a string.
+  * String
