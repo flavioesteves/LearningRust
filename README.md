@@ -77,7 +77,7 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 20. References and Borrowing (!IMPORTANT)
   * "&" before the type means Borrowing in RUST
   * "&mut" allow to be mutable. 
-  * Important rule for references in the same scope:
+  * Important rule for references in the same scope
     - Many immutable references
     - Single mutable reference 
 21. Explore the Ownership and Borrowing in GDB
@@ -98,4 +98,16 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 27. Strings
   * Rust have 2 types of strings
   * str is called a string slice of a string. Slice is an immutable reference to a part of a string.
-  * String
+  * Normal Strings can be expanded or they can shrink dynamically at the runtime, but string slices are immutable.
+  * All Strings in Rust are UTF8 and called it.
+  * String slice example &string[10...] give everything after the 10-bit not the 10th character
+28. Enums
+29. The Option Enum
+  * The option type allow to handle the no value.
+  * Option<Type>
+30. Organising Our Code into Modules
+  * keyword "mod"
+  * everything defined in the module by default is private.
+  * Is possible to have modules with sub-modules, to access the parent module is necessary to use the keyword "super"::
+31. Listening for TCP Connections
+  * [https://doc.rust-lang.org/std/net/struct.TcpListener.html#](https://doc.rust-lang.org/std/net/struct.TcpListener.html#)
