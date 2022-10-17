@@ -111,3 +111,32 @@ Function, Basic Data Types, Standard Library, Memory Ownership
   * Is possible to have modules with sub-modules, to access the parent module is necessary to use the keyword "super"::
 31. Listening for TCP Connections
   * [https://doc.rust-lang.org/std/net/struct.TcpListener.html#](https://doc.rust-lang.org/std/net/struct.TcpListener.html#)
+32. The Result Enum
+  * Rust groups errors in 2 categories: recoveravle and unrecoverable.
+  * Rust doen't support exceptions.
+  * Result Enum handles the recoverable errors.
+  * unwrap()
+33. Loops
+  * Rust had a special type of loop for infinite loops:
+    - loop {} This is a infinite loop syntax
+  * Loop can be labeled --> 'outer: loop {}
+34. Tuples
+  * Tuples is a general way of grouping together a number of values with different types into one compound type.
+  * Tuples are declared like the example: let tup = ("a", 2, Type)
+35. The Match Expression
+  * Match allow to compare a value against a series of patterns and the execute code based on which pattern matches.
+  * Match can be used as a regular switch statement
+  * Can be used multiple matches by using the "|"
+36. Arrays
+37. Logging the Incoming Requests to the console
+  * String::from_utf8_lossy(&buffer) -> Convert utf8 from array into String 
+38. Traits and Type Conversions
+  * Module std::convert "From", "TryFrom"
+  * "TryInto"
+  * Macro: unimplemented!()value
+  * trait Encrypt
+  * use crate:: --> is the root directory
+39. Custom Errors
+  * "{:?}" --> use the debug formatter with debug trait
+  * "{}" --> use the display trait
+  
