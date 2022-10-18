@@ -139,4 +139,9 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 39. Custom Errors
   * "{:?}" --> use the debug formatter with debug trait
   * "{}" --> use the display trait
-  
+40. Advanced Error Handling
+  * "use std::str";
+  * str::from_utf8(buf).or(Err(ParseError::InvalidEncding))?; 
+41. Iterating Over Strings
+  * To have the same behaviour of returning none the return Tulip is wrapped by the Option<&str, &str> 
+  * .chars().enumerate() in for loop 
