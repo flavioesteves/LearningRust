@@ -1,4 +1,4 @@
-use super::method::Method;
+use super::method::{Method, MethodError};
 use std::convert::TryFrom;
 use std::error::Error;
 use std::fmt::{Debug, Display, Formatter, Result as FmtResult};
@@ -41,6 +41,23 @@ impl TryFrom<&[u8]> for Request {
         // Special syntax that was created for solution 2
         //let request = str::from_utf8(buf).or(Err(ParseError::InvalidEncoding))?;
         let request = str::from_utf8(buf)?;
+
+        // L42
+        //match get_next_word(request) {
+        //    Some((method, request)) => {}
+        //    None => return Err(ParseError::InvalidRequest),
+        //}
+        //L42
+        let (method, request) = get_next_word(request).ok_or(ParseError::InvalidRequest)?;
+        let (path, request) = get_next_word(request).ok_or(ParseError::InvalidRequest)?;
+        let (protocol, request) = get_next_word(request).ok_or(ParseError::InvalidRequest)?;
+
+        if protocol != "HTTP/1.1" {
+            return Err(ParseError::InvalidProtocol);
+        }
+
+        let method: Method = method.parse()?;
+
         unimplemented!()
     }
 }
@@ -58,7 +75,7 @@ fn get_next_word(request: &str) -> Option<(&str, &str)> {
 
     //L41 for loop
     for (i, c) in request.chars().enumerate() {
-        if c == ' ' {
+        if c == ' ' || c == '\r' {
             return Some((&request[..i], &request[i + 1..]));
         }
     }
@@ -80,6 +97,12 @@ impl ParseError {
             Self::InvalidProtocol => "Invalid Protocol",
             Self::InvalidMethod => "Invalid Method",
         }
+    }
+}
+
+impl From<MethodError> for ParseError {
+    fn from(_: MethodError) -> Self {
+        Self::InvalidMethod
     }
 }
 

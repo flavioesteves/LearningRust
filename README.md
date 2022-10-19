@@ -145,3 +145,8 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 41. Iterating Over Strings
   * To have the same behaviour of returning none the return Tulip is wrapped by the Option<&str, &str> 
   * .chars().enumerate() in for loop 
+42. Converting an Option into a Result
+  * .ok_or()
+  * variable shadowing
+43. Parsing Values From Strings
+  * use std::str::FromStr; 
