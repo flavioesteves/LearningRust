@@ -150,3 +150,13 @@ Function, Basic Data Types, Standard Library, Memory Ownership
   * variable shadowing
 43. Parsing Values From Strings
   * use std::str::FromStr; 
+44. The "If Let" Expression
+  * String.find();
+  * i + 1 in rust is not when Iterating over Strings is not  "+ 1 character" but "+ 1 byte"
+45. Lifetimes-Part1 - !IMPORTANT
+46. Lifetimes-Part2 - !IMPORTANT
+  * Lifetime is a unique characteristic in Rust compared to all other languages
+  * Implement Lifetimes syntax: <'SINGLE_LETTER> (Example: pub struct Request <'a> )
+47. Silencing Compiler Warnings
+  * To ignore warning is necessary to add in the main.rs file:
+    - Line1 --> #![allow(dead_code)]
