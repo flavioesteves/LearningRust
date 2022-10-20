@@ -160,3 +160,4 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 47. Silencing Compiler Warnings
   * To ignore warning is necessary to add in the main.rs file:
     - Line1 --> #![allow(dead_code)]
+48. Representing the Query String Using a Hash Map - Part1 
