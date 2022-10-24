@@ -157,7 +157,19 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 46. Lifetimes-Part2 - !IMPORTANT
   * Lifetime is a unique characteristic in Rust compared to all other languages
   * Implement Lifetimes syntax: <'SINGLE_LETTER> (Example: pub struct Request <'a> )
-47. Silencing Compiler Warnings
+47. Silencing Compiler Warnings 
   * To ignore warning is necessary to add in the main.rs file:
     - Line1 --> #![allow(dead_code)]
 48. Representing the Query String Using a Hash Map - Part1 
+  * use std::collections::HashMap
+  * Create dynamically Array in Rust is called Vector --> Syntax: Vec
+49. Representing the Query String Using a Hash Map - Part2  
+  * HashMap::new()
+  * Querystring { data }
+  * string.split()
+  * HashMap.entry()
+  * vec![prev_value, value];
+  * The syntax for a deference sync interest is putting a * and write this new value over whatever it was pointing to before.
+    - Example: *variable = 3;
+  
+50. The Derive Attribute

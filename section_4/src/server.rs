@@ -29,7 +29,9 @@ impl Server {
                             // two ways to do
                             // Request::try_from(&buffer as  &[u8]);
                             match Request::try_from(&buffer[..]) {
-                                Ok(request) => {}
+                                Ok(request) => {
+                                    dbg!(request);
+                                }
                                 Err(e) => println!("Failed to parse a request: {}", e),
                             }
                             //let res: &Result<Request, _> = &buffer[..].try_into();
