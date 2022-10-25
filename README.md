@@ -171,5 +171,8 @@ Function, Basic Data Types, Standard Library, Memory Ownership
   * vec![prev_value, value];
   * The syntax for a deference sync interest is putting a * and write this new value over whatever it was pointing to before.
     - Example: *variable = 3;
-  
 50. The Derive Attribute
+  * Syntax: #[derive(Debug)]
+51. Modelling the HTTP Response
+  * New struct was created "response.rs"
+52. Copy and Clone Types
