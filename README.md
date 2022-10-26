@@ -176,3 +176,33 @@ Function, Basic Data Types, Standard Library, Memory Ownership
 51. Modelling the HTTP Response
   * New struct was created "response.rs"
 52. Copy and Clone Types
+  * status_code.rs
+  * #[derive(Copy, Clone)]
+53. Writing Data to a TCP Stream
+  * Module std::io::write
+54. Dynamic vs Static Dispatch
+  * dyn: resolve at runtime
+  * impl: resolve at compile time
+55. Custom Traits
+  * server.rs -> pub trait handler
+56. Implementing Getters
+  * request.rs
+57. Routing Incoming Requests
+  * website_handler
+58. Working with Environnment Variables
+  * New Folder public
+  * website_handler new public path
+  * use std::env;
+  * env!("CARGO_MANIFEST_DIR");
+59. Serving HTML files
+  * Folder public new .html files
+  * updating the website_handler
+  * fn read_file 
+60. Serving Arbitrary Files Securely
+  * use std::fs;
+  * match fs::canonicalize(path) --> website_handler 
+61. Next Steps
+  * Module std::thread
+  * Module std::sync
+  * to convert single thread to multiple threads
+  * Async: Tokio.rs
